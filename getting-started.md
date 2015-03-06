@@ -3,14 +3,15 @@ Backend
 
 ## Getting started
 
-1. Optionally Install Node Tools for Visual Studio 
-1. git clone https://github.com/Xignal/Backend.git
-1. cd ./Backend
-1. npm install sails 
+1. git clone https://github.com/Xignal/App.git
+1. cd ./App/src
+1. npm install sails
+1. npm install sails-mongo 
+1. create **config/local.js** with your secret DB settings (see example below)
 1. sails lift 
-1. create a `config/local.js` config file with your DB settings, e.g.
 
 ```javascript
+// contents of local.js. Add your own secrets. This file will not be committed.
 module.exports.connections = {
     
   someMongodbServer: {
@@ -23,5 +24,3 @@ module.exports.connections = {
     }    
 };
 ```
-
-Hit F5 in Visual Studio if you want run and debug in the IDE.
