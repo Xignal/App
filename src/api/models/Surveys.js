@@ -6,7 +6,6 @@
 */
 
 module.exports = {
-    connection: 'someMongoDbServer',
     attributes: {
         userId : {type: 'string', required: true },
         name: { type: 'string', required: true },
