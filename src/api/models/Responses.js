@@ -6,7 +6,7 @@
 */
 
 module.exports = {
-    connection: 'someMongodbServer',
+    connection: 'someMongoDbServer',
     attributes: {
         questionId : { type: 'string', required: true },
         responderId: 'string',

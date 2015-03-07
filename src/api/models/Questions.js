@@ -6,11 +6,11 @@
 */
 
 module.exports = {
-    connection: 'someMongodbServer',
+    connection: 'someMongoDbServer',
   attributes: {
         text: 'string',
         type: {
-            type: 'string', 
+            type: 'string',
             enum: ['string', 'text', 'range']
         },
   }
