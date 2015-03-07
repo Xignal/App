@@ -10,7 +10,7 @@ a { color: #fff; }
 .text-thin { font-weight: 200 !important; }
 
 .app { background: rgba(0,0,0,0.1); }
-.navbar-app { color: #fff; background: ; }
+.navbar-app { color: #fff; }
 .navbar-brand { font-weight: 700; color: #fff; background: none; border: 0; }
 
 /* Allows us to have nice overlay effect, also where the background colour lives */
@@ -30,7 +30,7 @@ a { color: #fff; }
 
 /* Nav panels (top and bottom) */
 .navbar-absolute-top { border: 0; background: rgba(0,0,0,0.2); }
-.navbar-absolute-top .logo { background: url(../images/logo.png) no-repeat 0 50%; width: 50px; height: 50px; background-size: 20px 20px; display: block; }
+.navbar-absolute-top .logo { background: url(/images/logo.png) no-repeat 0 50%; width: 50px; height: 50px; background-size: 20px 20px; display: block; }
 
 .navbar-absolute-bottom { border: 0; background: transparent; }
 .navbar-absolute-bottom .button { line-height: 50px; text-align: center; }
