@@ -7,52 +7,51 @@
   app.constant('routes', getRoutes());
 
   // Configure the routes and route resolvers
-  app.config(['$routeProvider', 'routes', routeConfigurator]);
-  function routeConfigurator($routeProvider, routes) {
+  app.config(['$stateProvider', '$urlRouterProvider', 'routes', routeConfigurator]);
+  function routeConfigurator($stateProvider, $urlRouterProvider, routes) {
     routes.forEach(function (r) {
-        $routeProvider.when(r.url, r.config);
+        $stateProvider.state(r.name, r.config);
     });
-    //$routeProvider.otherwise({ redirectTo: '/' });
+    $urlRouterProvider.otherwise('/');
   }
 
   // Define the routes
   function getRoutes() {
     return [
       {
-        url: '/',
+        name: 'admin',
         config: {
-          title: 'home',
-          templateUrl: '/app/home/home.html'
-        }
-      }, {
-        url: '/admin',
-        config: {
+          url: '/admin',
           title: 'admin',
           templateUrl: '/app/admin/admin.html',
         }
       }, {
-        url: '/aklsw',
+        name: 'aklsw',
         config: {
+          url: '/aklsw',
           title: 'aklsw',
           templateUrl: '/app/aklsw/aklsw.html',
         }
       }, {
-        url: '/xignals',
+        name: 'xignals',
         config: {
+          url: '/xignals',
           title: 'xignals',
-          templateUrl: '/app/xignals/xignals.html'
+          templateUrl: '/app/surveys/surveys.html'
         }
       }, {
-        url: '/email',
+        name: 'email',
         config: {
+          url: '/email',
           title: 'email',
-          templateUrl: '/app/email.html'
+          templateUrl: '/app/survey/email.html'
         }
       }, {
-        url: '/fistpump',
+        name: 'fistpump',
         config: {
+          url: '/fistpump',
           title: 'fistpump',
-          templateUrl: '/app/fistpump.html'
+          templateUrl: '/app/survey/fistpump.html'
         }
       }
     ];
