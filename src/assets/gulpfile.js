@@ -7,7 +7,7 @@ var gulp = require('gulp'),
 
 // Minify CSS
 gulp.task('minify-css', function() {
-  gulp.src('css/*.scss')
+  gulp.src('scss/*.scss')
   	.pipe(plumber())
   	.pipe(sass())
     .pipe(minify({keepBreaks:true}))
@@ -16,7 +16,7 @@ gulp.task('minify-css', function() {
 
 // Watchdog
 gulp.task('watch', function(){
-	gulp.watch('css/*.scss', ['minify-css']);
+	gulp.watch('scss/*.scss', ['minify-css']);
 });
 
 // Set default Gulp command
