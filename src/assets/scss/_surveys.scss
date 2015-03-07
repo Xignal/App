@@ -1,0 +1,7 @@
+.tile {
+  margin: 1rem;
+  padding: 1rem;
+  &.subtle {
+    background-color: $grey-11;
+  }
+}

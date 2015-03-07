@@ -1,0 +1,83 @@
+// Breakpoints
+$medium-screen: rem(768);
+$large-screen: rem(1248);
+
+$small-column-count:   4;
+$small-column-width:   25%;
+$small-gutter-width:   3.4375%;
+$small-content-width:  100% - 2 * $small-gutter-width;
+$medium-column-count:  6;
+$medium-column-width:  rem(128);
+$medium-gutter-width:  rem(12);
+$medium-content-width: $medium-screen - 2 * $medium-gutter-width;
+$large-column-count:   12;
+$large-column-width:   rem(104);
+$large-gutter-width:   rem(16);
+$large-content-width:  $large-screen - 2 * $large-gutter-width;
+
+@mixin small-screen-size {
+  @media screen and (max-width: $medium-screen) {
+    @content;
+  }
+}
+
+@mixin medium-screen-size {
+  @media screen and (min-width: $medium-screen) and (max-width: $large-screen) {
+    @content;
+  }
+}
+
+@mixin large-screen-size {
+  @media screen and (min-width: $large-screen) {
+    @content;
+  }
+}
+
+@mixin outer-container {
+  @include clearfix;
+  @include margin(null auto null auto);
+
+  @include small-screen-size {
+    max-width: $medium-screen;
+  }
+  @include medium-screen-size {
+    width: $medium-content-width;
+  }
+  @include large-screen-size {
+    width: $large-content-width;
+  }
+}
+
+@mixin span-columns($span, $display: block) {
+  display: $display;
+  float: left;
+
+  @include small-screen-size {
+    margin-right: 2 * $small-gutter-width;
+    width: $span * $small-column-width - 2 * $small-gutter-width;
+  }
+  @include medium-screen-size {
+    margin-right: 2 * $medium-gutter-width;
+    width: $span * $medium-column-width - 2 * $medium-gutter-width;
+  }
+  @include large-screen-size {
+    margin-right: 2 * $large-gutter-width;
+    width: $span * $large-column-width - 2 * $large-gutter-width;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+@mixin remainding-width($other-width) {
+  // @include small-screen-size {
+  //   width: - $other-width;
+  // }
+  @include medium-screen-size {
+    width: $medium-content-width - $other-width;
+  }
+  @include large-screen-size {
+    width: $large-content-width - $other-width;
+  }
+}

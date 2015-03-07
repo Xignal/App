@@ -1,23 +1,52 @@
-<div class="app">
+<link rel="stylesheet" href="/css/custom.css">
 
-  <div class="navbar navbar-app navbar-absolute-top">
-    <div class="navbar-brand navbar-brand-center">
-      <span>[Survey title]</span>
+<div class="header pure-menu-horizontal pure-menu-fixed">
+    <div class="home-menu pure-menu hidden">
+        <a class="pure-menu-heading" href=""><img src="/images/xignal-logo.svg" alt="Xignal" style="max-height:1.5em;"></a>
+
+        <ul class="pure-menu-list">
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Try</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Login</a></li>
+        </ul>
     </div>
-    <div class="btn-group pull-left">
-      <div class="btn btn-navbar sidebar-toggle">
-        <span class="logo"></span>
+
+    <div class="title pure-menu-horizontal pure-menu-fixed">
+      <div class="pure-g">
+          <div class="pure-u-1-1 text-center">
+            <div class="l-box">
+              <h1>Xignal Event 2015</h1>
+            </div>
+          </div>
+        </div>
+    </div>
+</div>
+
+<div class="content-wrapper">
+    <div class="content respondent">
+    <div class="pure-g">
+      <div class="pure-u-1-1 l-box">
+        <div class="story text-center">
+          <p>Thanks for coming to my talk at Xignal Event 2015!</p>
+
+          <p>I’d love if you could provide me with a little bit of feedback.</p>
+        </div>
+
+        <div class="text-center">
+          <p><a class="pure-button" href="/app/respondent/step-1.html">Let’s go!</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="powered-by">
+      <div class="pure-g">
+        <div class="pure-u-1-1 text-center text-small">
+          <a href="#"><img src="/images/xignal-logo-light-bg.svg" alt="Xignal" style="max-height:2em;"></a>
+        </div>
       </div>
     </div>
   </div>
+</div>
 
-  <div class="navbar navbar-app navbar-absolute-bottom">
-    <div class="row">
-    </div>
-  </div>
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
 
-  <div class="app-body">
-    Thank you for taking the time to provide feedback.
-  </div>
-
-</div><!-- /.app -->
+<%- partial('spa-scripts.ejs') %>

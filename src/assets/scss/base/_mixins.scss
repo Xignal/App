@@ -1,0 +1,35 @@
+@mixin vertically-aligned {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+};
+
+@mixin horizontally-centered($additional-transformation: "") {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%) $additional-transformation;
+}
+
+@mixin centred {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin horizontal-menu {
+  text-align: center;
+  li {
+    display: inline-block;
+  }
+}
+
+@mixin single-line-clip {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: clip;
+}
+
+@mixin dropshadow {
+  box-shadow: 0 0 rem(10) rgba(0, 0, 0, .4);
+}

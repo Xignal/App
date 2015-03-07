@@ -36,8 +36,24 @@ module.exports.routes = {
     view: 'home'
   },
 
-  '/id/:id': {
+  '/survey/:id': {
     view: 'survey'
+  },
+
+  '/register': {
+    view: 'register'
+  },
+
+  '/signin': {
+    view: 'signin'
+  },
+
+  '/profile': {
+    view: 'profile'
+  },
+
+  '/dashboard': {
+    view: 'dashboard'
   }
 
   /***************************************************************************

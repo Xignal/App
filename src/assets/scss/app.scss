@@ -1,0 +1,11 @@
+@import "base";
+@import "footer";
+@import "header";
+@import "forms";
+@import "surveys";
+
+.inner {
+  margin: auto;
+  max-width: $large-screen;
+}
+
