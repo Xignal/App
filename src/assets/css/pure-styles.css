@@ -177,7 +177,7 @@ a.pure-button-primary {
  * -- CONTENT STYLES --
  * This represents the content area (everything below the blue section)
  */
-.content-wrapper {
+.home .content-wrapper {
     /* These styles are required for the "scroll-over" effect */
     position: absolute;
     top: 87%;
