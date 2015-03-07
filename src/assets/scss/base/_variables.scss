@@ -1,0 +1,40 @@
+// Background colours
+$base-background-color: $white;
+$secondary-background-colour: $primary-blue-4;
+
+// Misc Sizes
+$base-border-radius: 3px;
+
+// Border
+$base-border-color: $white;
+$base-border: 1px solid $base-border-color;
+
+// Header and Footer
+$header-and-footer-background-color: $primary-blue-3;
+
+// Forms
+$form-box-shadow: inset 0 1px 3px rgba($black, 0.06);
+$form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $lightness: -5%, $alpha: -0.3);
+
+$default-padding: rem(13);
+$default-large-padding: rem(30);
+$default-border-radius: rem(5);
+$default-button-padding: $default-padding;
+$default-button-border-radius-small: $default-border-radius;
+$default-button-border-diameter-small: $default-button-border-radius-small * 2;
+$default-button-border-radius-large: rem(22);
+$default-button-border-diameter-large: $default-button-border-radius-large * 2;
+
+// z-indexing variables
+// Use these to set 'layers' from which elements can be relatively placed in z space.
+// In your element code use +n -n to place elements relative to the layer variable
+$base-z-index: 0;
+$z-index-popover: 1000;
+$z-index-popupmenu: 2000;
+$z-index-modal: 3000;
+
+// Border radius globals - we all like round-y corners
+$border-radius-tight: rem(3px);
+$border-radius-normal: rem(4px);
+$border-radius-large: rem(6px);
+$border-radius-xlarge: rem(8px);

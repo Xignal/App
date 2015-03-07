@@ -1,0 +1,190 @@
+@import "open-sans";
+
+// Font configuration
+$base-font-family: "Open Sans", sans-serif;
+$heading-font-family: $base-font-family;
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+
+// Font Colours
+$base-font-color: $xignal-text;
+
+@mixin font-size($size-value: 16) {
+  font-size: rem($size-value);
+}
+
+@mixin line-height($size-value: 19) {
+  line-height: rem($size-value);
+}
+
+@mixin text-margin($size-value: 19) {
+  margin-bottom: rem($size-value);
+}
+
+@mixin bold-weight-font() {
+  font-weight: $font-weight-bold;
+}
+
+@mixin normal-weight-font() {
+  font-weight: $font-weight-normal;
+}
+
+@mixin light-weight-font() {
+  font-weight: $font-weight-light;
+}
+
+@mixin font-configuration($font-size: 15,
+$line-height: 24,
+$weight: normal,
+$include-margin: false) {
+  @include font-size($font-size);
+  @include line-height($line-height);
+  @if $include-margin {
+    @include text-margin($line-height);
+  }
+
+  @if $weight == bold {
+    @include bold-weight-font();
+  } @else if $weight == light {
+    @include light-weight-font();
+  } @else {
+    @include normal-weight-font();
+  }
+}
+
+@mixin h1-font($include-margin: false) {
+  @include font-configuration(
+  $font-size: 34,
+  $line-height: 42,
+  $weight: light,
+  $include-margin: $include-margin);
+}
+
+@mixin h2-font($include-margin: false) {
+  @include font-configuration(
+  $font-size: 28,
+  $line-height: 36,
+  $include-margin: $include-margin);
+}
+
+@mixin h3-font($include-margin: false) {
+  @include font-configuration(
+  $font-size: 24,
+  $line-height: 30,
+  $include-margin: $include-margin);
+}
+
+@mixin h4-font($include-margin: false) {
+  @include font-configuration(
+  $font-size: 18,
+  $line-height: 22,
+  $weight: bold,
+  $include-margin: $include-margin);
+}
+
+@mixin h5-font($include-margin: false) {
+  @include font-configuration(
+  $font-size: 16,
+  $line-height: 20,
+  $weight: bold,
+  $include-margin: $include-margin);
+}
+
+@mixin h6-font($include-margin: false) {
+  @include font-configuration(
+  $font-size: 13,
+  $line-height: 16,
+  $weight: bold,
+  $include-margin: $include-margin);
+}
+
+@mixin large-font($include-margin: false) {
+  @include font-configuration(
+  $font-size: 17,
+  $line-height: 27,
+  $include-margin: $include-margin);
+}
+
+@mixin normal-font($include-margin: false) {
+  @include font-configuration(
+  $font-size: 15,
+  $line-height: 24,
+  $include-margin: $include-margin);
+  @include font-configuration(15, 24, normal, $include-margin);
+}
+
+@mixin small-font($include-margin: false) {
+  @include font-configuration(
+  $font-size: 13,
+  $line-height: 20,
+  $include-margin: $include-margin);
+}
+
+@mixin tiny-font($include-margin: false) {
+  @include font-configuration(
+  $font-size: 11,
+  $line-height: 18,
+  $include-margin: $include-margin);
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  color: $base-font-color;
+  font-family: $base-font-family;
+  @include font-size();
+  @include line-height();
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0 0;
+  font-family: $base-font-family;
+  color: $base-font-color;
+}
+
+p {
+  @include normal-font($include-margin: true);
+}
+
+a {
+  color: $action-color;
+  text-decoration: none;
+  transition: color 0.1s linear;
+
+  &:active,
+  &:focus,
+  &:hover {
+    color: darken($action-color, 15%);
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+  }
+}
+
+hr {
+  border-bottom: $base-border;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  margin: 16px 0;
+  margin: 1.6rem 0;
+}
+
+img,
+picture {
+  margin: 0;
+  max-width: 100%;
+}
+
+h1 { @include h1-font(); }
+h2 { @include h2-font(); }
+h3 { @include h3-font(); }
+h4 { @include h4-font(); }
