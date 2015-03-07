@@ -1,177 +1,55 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600,700,300);
-
-body { font-family: 'Open Sans', sans-serif; background: #fff; color: #fff; }
-strong, .strong { font-weight: 700; }
-a { color: #fff; }
-.text-left { text-align: left; }
-.text-right { text-align: right; }
-.text-center { text-align: center; }
-.text-05opacity { opacity: 0.75; }
-.text-thin { font-weight: 200 !important; }
-
-.app { background: rgba(0,0,0,0.1); }
-.navbar-app { color: #fff; }
-.navbar-brand { font-weight: 700; color: #fff; background: none; border: 0; }
-
-/* Allows us to have nice overlay effect, also where the background colour lives */
-.push-down { padding-top: 20px; background: #9524ba; }
-.push-down.purple { background: #824399; }
-.push-down.blue { background: #5B8EA6; }
-.push-down.red { background: #BC4848; }
-.push-down.green { background: #73BF47; }
-
-/* Main content container */
-.main-content { padding-top: 20%; }
-.main-content h1 { font-weight: 700; padding-bottom: 0.5em; font-size: 2em; }
-
-.app-body { margin-top: -50px; top: 100px; box-sizing: content-box; }
-.has-navbar-bottom .app-body { padding-bottom: 0; }
-.app-body .helper { padding-top: 1em; }
-
-/* Nav panels (top and bottom) */
-.navbar-absolute-top { border: 0; background: rgba(0,0,0,0.2); }
-.navbar-absolute-top .logo { background: url(/images/logo.png) no-repeat 0 50%; width: 50px; height: 50px; background-size: 20px 20px; display: block; }
-
-.navbar-absolute-bottom { border: 0; background: transparent; }
-.navbar-absolute-bottom .button { line-height: 50px; text-align: center; }
-.navbar-absolute-bottom .button.key-action .col-xs-4 { background: #fff; color: #999; display: block; padding-left: 0; }
-
-/* Fistpump image */
-.fist-pump-image { width: 100%; height: 130px; background-size: 100% 100%; display: block; background: url(../images/fist-pump.png) no-repeat 50% 50%; background-size: 130px 130px; margin-bottom: 2em; }
-
-/* Text input */
-input[type=text] { color: #333; background: #fff; border: 0; width: 100%; padding: 0.5em 1em; font-size: 20px; }
-.input-line { width: 100%; min-height: 10px; background: rgba(0,0,0,0.1); padding: 10px; }
-
-/* Form prettifier */
-input[type=range] {
-    /*removes default webkit styles*/
-    -webkit-appearance: none;
-
-    /*fix for FF unable to apply focus style bug */
-    border: 1px solid transparent;
-
-    /*required for proper track sizing in FF*/
-    width: 100%;
-}
-input[type=range]::-webkit-slider-runnable-track {
-    width: 100%;
-    height: 5px;
-    background: rgba(0,0,0,0.1);
-    border: none;
-    border-radius: 3px;
-}
-input[type=range]::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    opacity: 1 !important;
-    border: none;
-    height: 25px;
-    width: 25px;
-    border-radius: 50%;
-    background: #fff;
-    margin-top: -10px;
-}
-input[type=range]:focus {
-    outline: none;
-}
-input[type=range]:focus::-webkit-slider-runnable-track {
-    background: #ccc;
-}
-
-input[type=range]::-moz-range-track {
-    width: 100%;
-    height: 5px;
-    background: rbga(0,0,0,0.5);
-    border: none;
-    border-radius: 3px;
-}
-input[type=range]::-moz-range-thumb {
-    border: none;
-    height: 25px;
-    width: 25px;
-    border-radius: 50%;
-    background: #fff;
-}
-
-/*hide the outline behind the border*/
-input[type=range] {
-  background: transparent !important;
-}
-
-input[type=range]:-moz-focusring{
-    outline: 1px solid transparent;
-    outline-offset: -1px;
-}
-
-input[type=range]::-ms-track {
-    width: 100%;
-    height: 5px;
-
-    /*remove bg colour from the track, we'll use ms-fill-lower and ms-fill-upper instead */
-    background: transparent;
-
-    /*leave room for the larger thumb to overflow with a transparent border */
-    border-color: transparent;
-    border-width: 6px 0;
-
-    /*remove default tick marks*/
-    color: transparent;
-}
-input[type=range]::-ms-fill-lower {
-    background: rbga(0,0,0,0.5);
-    border-radius: 10px;
-}
-input[type=range]::-ms-fill-upper {
-    background: rbga(0,0,0,0.5);
-    border-radius: 10px;
-}
-input[type=range]::-ms-thumb {
-    border: none;
-    height: 25px;
-    width: 25px;
-    border-radius: 50%;
-    background: #fff;
-}
-input[type=range]:focus::-ms-fill-lower {
-    background: rbga(0,0,0,0.5);
-}
-input[type=range]:focus::-ms-fill-upper {
-    background: rbga(0,0,0,0.5);
-}
-
-/* Naviagtion dots */
-.pager {
-  line-height: 1px !important;
-  box-sizing: border-box;
-  border-radius: 20px;
-  background: transparent;
-  text-align: center;
-  width: 200px;
-  margin: 18px 0 0 -100px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-}
-.pager a.selected span {
-  background: #fff;
-  opacity: 1;
-}
-.pager a {
-  display: inline-block;
-  padding: 1px;
-}
-.pager span {
-  opacity: 0.5;
-  line-height: 1px !important;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  border-radius: 15px;
-  background: #fff;
-  text-indent: -100px;
-  line-height: 0;
-  display: inline-block;
-  width: 8px;
-  height: 8px;
-  overflow: hidden;
-}
+*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
+body{background:#f2f2f2;color:grey;font-family:'Open Sans',Helvetica,Arial,sans-serif;font-size:13px;line-height:1.7em}
+h1,h2,h3,h4,h5,h6,label{font-family:'Open Sans',Helvetica,Arial,sans-serif;color:#34495e}
+p{font-family:'Open Sans',Helvetica,Arial,sans-serif}
+.pure-img-responsive{max-width:100%;height:auto}
+.pure-form label{font-size:80%}
+.pure-form input[type],.pure-form textarea{border:2px solid #ddd;font-size:100%;width:100%;display:block;margin-bottom:1em;-webkit-appearance:none;box-shadow:none;padding:.8em}
+.pure-form input[type]:focus,.pure-form textarea:focus{border-color:#f7b113}
+.pure-button{background:#f7b113;border-radius:9999px!important;color:#fff;font-weight:700;padding:1em 2em;transition:background-color .5s ease}
+.pure-button:active,.pure-button:focus,.pure-button:hover{box-shadow:none;background-image:none!important}
+.pure-button:hover{background:#f9c144;color:#fff}
+.pure-button:active{box-shadow:inset 0 3px 5px rgba(0,0,0,.1)}
+.home-menu{background:#404040;display:inline-block;padding:.5em;text-align:center;text-transform:uppercase;width:100%}
+.pure-menu.pure-menu-fixed{border-bottom:none;z-index:4}
+.home-menu a.pure-menu-heading{color:#fff;font-weight:700;font-size:120%;opacity:1}
+.home-menu .pure-menu-selected a{color:#fff}
+.home-menu ul.pure-menu-list{display:none}
+.home-menu li a{color:#FFF;font-size:80%;opacity:.7;line-height:3em}
+.home-menu li a:focus,.home-menu li a:hover{background:0 0;border:none;opacity:1}
+.header .title{background:#36bfcb;display:block;width:100%;position:relative}
+.header .title h1{font-size:120%;color:#fff;margin:.25em 0;font-weight:700}
+.content-wrapper{margin-top:4em}
+.content{margin:0 auto;max-width:600px}
+.respondent h2{font-size:2em;font-weight:300}
+.respondent .story{font-size:1.6em;font-weight:300}
+.respondent .story p{line-height:1.2em}
+.respondent .range{margin:0;padding:.5em 0 1em}
+.respondent .range li{display:inline-block;margin:0;padding:0 .3em}
+.respondent .range li a{display:block;height:1.5em;width:1.5em;border:3px solid #ddd;border-radius:9999px}
+.respondent .range li a:hover{background:#ddd}
+.respondent .range li a span{display:block}
+.respondent .range li a.active{background:#f7b113;border-color:#f7b113}
+.respondent .tag{margin:0 auto;position:absolute;display:inline-block;color:#aaa;font-size:60%;height:1em;width:5em;padding:.2em 0}
+.respondent .tag.left,.respondent .tag.right{text-align:center;margin-left:-2.5em}
+.powered-by{position:absolute;bottom:30px;left:50%;margin-left:-3em;font-family:'Open Sans',Helvetica,Arial,sans-serif;color:#ccc}
+.powered-by span{display:block;height:2em;line-height:2em;vertical-align:middle}
+.powered-by a{opacity:.3;transition:opacity .5s ease;clear:both}
+.powered-by a:hover{opacity:1}
+.l-box{padding:1em}
+.text-center{text-align:center}
+.text-left{text-align:left}
+.text-right{text-align:right}
+.text-grey{color:#b3b3b3}
+.text-small{font-size:80%}
+a.clean{border:none!important}
+.well{background:#fff;border-radius:5px;border:1px solid #ccc;padding:1em}
+@media (min-width:48em){body{font-size:16px}
+.content{padding:1em}
+.home-menu{text-align:left}
+.home-menu ul{display:inline-block;float:right;padding-right:1em;position:absolute;right:0;top:.6em}
+.home-menu ul.pure-menu-list{display:inline-block}
+.splash{width:50%;height:50%}
+.splash-head{font-size:250%}
+.l-box-lrg{border:none}}
+@media (min-width:78em){.splash-head{font-size:300%}}
