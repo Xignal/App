@@ -26,32 +26,11 @@
           templateUrl: '/app/admin/admin.html',
         }
       }, {
-        name: 'aklsw',
+        name: 'surveys',
         config: {
-          url: '/aklsw',
-          title: 'aklsw',
-          templateUrl: '/app/aklsw/aklsw.html',
-        }
-      }, {
-        name: 'xignals',
-        config: {
-          url: '/xignals',
-          title: 'xignals',
+          url: '/surveys',
+          title: 'surveys',
           templateUrl: '/app/surveys/surveys.html'
-        }
-      }, {
-        name: 'email',
-        config: {
-          url: '/email',
-          title: 'email',
-          templateUrl: '/app/survey/email.html'
-        }
-      }, {
-        name: 'fistpump',
-        config: {
-          url: '/fistpump',
-          title: 'fistpump',
-          templateUrl: '/app/survey/fistpump.html'
         }
       }
     ];
