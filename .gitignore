@@ -190,3 +190,4 @@ src/config/local.js
 
 # Misc
 .DS_Store
+bower_components/
