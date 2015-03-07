@@ -182,6 +182,11 @@ UpgradeLog*.htm
 # Microsoft Fakes
 FakesAssemblies/
 
+# Webstorm indexing
+.idea/
 
 # Xignal
 src/config/local.js
+
+# Misc
+.DS_Store
