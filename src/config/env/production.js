@@ -11,6 +11,8 @@
  */
 
 module.exports = {
+  // if grunt tasks timeout on startup, increase this value.
+  hookTimeout: 60000
 
   /***************************************************************************
    * Set the default database connection for models in the production        *
