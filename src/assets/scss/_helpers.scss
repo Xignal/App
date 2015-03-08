@@ -1,0 +1,48 @@
+/**
+*
+* -- HELPER STYLES --
+* Let's make life a little bit easier
+*
+**/
+
+.l-box { padding: 1em; }
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+.text-grey { color: lighten($xignal-text, 20%); }
+.text-small { font-size: 80%; }
+
+.well {
+    background: #fff;
+    border-radius: 15px;
+    border: 2px solid #ddd;
+    padding: 1em;
+    margin-bottom: 1em;
+}
+
+/**
+*
+* -- BUTTONS STYLING --
+*
+**/
+
+.pure-button {
+    background: $xignal-orange;
+    border-radius: 9999px !important;
+    color: white;
+    font-weight: 700;
+    padding: 1em 2em;
+    transition: background-color 0.5s ease;
+}
+
+// Reset all the buttons
+.pure-button:hover,
+.pure-button:active,
+.pure-button:focus {
+    box-shadow: none;
+    background-image: none !important;
+}
+
+.pure-button:hover { background: lighten($xignal-orange, 10%); color: white; }
+.pure-button:active { box-shadow: inset 0 3px 5px rgba(0,0,0,0.1); }
+

@@ -3,3 +3,63 @@ header {
   background-color: $primary-nav-and-footer-colour;
 }
 
+/*
+ * -- MENU STYLES --
+ */
+
+.home-menu {
+    background: #404040;
+    display: inline-block;
+    padding: 0.5em;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+}
+.pure-menu.pure-menu-fixed {
+    /* Fixed menus normally have a border at the bottom. */
+    border-bottom: none;
+    /* I need a higher z-index here because of the scroll-over effect. */
+    z-index: 4;
+}
+
+.home-menu a.pure-menu-heading {
+    color: white;
+    font-weight: 700;
+    font-size: 120%;
+    opacity: 1;
+}
+
+.home-menu .pure-menu-selected a {
+    color: white;
+}
+
+.home-menu ul.pure-menu-list {
+    display: none;
+}
+
+.home-menu li a {
+    color: #FFF;
+    font-size: 80%;
+    opacity: 0.7;
+    line-height: 3em;
+}
+.home-menu li a:hover,
+.home-menu li a:focus {
+    background: none;
+    border: none;
+    opacity: 1;
+}
+
+// Title is used to display the questionaire name
+.header .title {
+    background: $xignal-blue;
+    display: block;
+    width: 100%;
+    position: relative;
+}
+.header .title h1 { 
+    font-size: 120%;
+    color: #fff;
+    margin: 0.25em 0;
+    font-weight: 700;
+}
