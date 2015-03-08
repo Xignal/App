@@ -17,42 +17,43 @@
 <div class="wrapper main">
     <div class="pure-g inner">
 
-        <!--Sidebar 1-->
-        <div class="pure-u-6-24">
-
-        </div>
-
         <!--Main content-->
-        <div class="pure-u-18-24">
+        <div class="pure-u-1">
             <h1>Dashboard: Your surveys</h1>
 
-            <div class="pure-g">
-                <div class="pure-u-8-24 tile subtle">
-                    <a class="pure-button pure-button-primary" href="">Create survey</a>
-                </div>
-                <div class="pure-u-8-24 tile subtle">
-                    <h3>Survey name goes here</h3>
-                    <date>Date of survey</date>
-                    <p>Responses: XX</p>
-                </div>
-                <div class="pure-u-8-24 tile subtle">
-                    <h3>Survey name goes here</h3>
-                    <date>Date of survey</date>
-                    <p>Responses: XX</p>
-                </div>
-                <div class="pure-u-8-24 tile subtle">
-                    <h3>Survey name goes here</h3>
-                    <date>Date of survey</date>
-                    <p>Responses: XX</p>
-                </div>
-                <div class="pure-u-8-24 tile subtle">
-                    <h3>Survey name goes here</h3>
-                    <date>Date of survey</date>
-                    <p>Responses: XX</p>
-                </div>
-
+            <div class="tile subtle">
+                <a class="pure-button pure-button-primary" href="">Create survey</a>
             </div>
-
+            <survey-tile
+                    survey-name="'My survey name'"
+                    survey-date="'2015-03-08T01:01:18.291Z'"
+                    survey-response-count="23"
+                    survey-status="open"
+            ></survey-tile>
+            <survey-tile
+                    survey-name="'Another survey name'"
+                    survey-date="'2015-03-08T01:01:18.291Z'"
+                    survey-response-count="16"
+                    survey-status="open"
+            ></survey-tile>
+            <survey-tile
+                    survey-name="'Me survey amigo closed'"
+                    survey-date="'2015-03-08T01:01:18.291Z'"
+                    survey-response-count="20"
+                    survey-status="closed"
+            ></survey-tile>
+            <survey-tile
+                    survey-name="'My survey name closed'"
+                    survey-date="'2015-03-08T01:01:18.291Z'"
+                    survey-response-count="23"
+                    survey-status="closed"
+            ></survey-tile>
+            <survey-tile
+                    survey-name="'My survey name'"
+                    survey-date="'2015-03-08T01:01:18.291Z'"
+                    survey-response-count="23"
+                    survey-status="closed"
+            ></survey-tile>
         </div>
 
     </div>
@@ -68,3 +69,4 @@
 </footer>
 
 <%- partial('spa-scripts.ejs') %>
+<script src="app/dashboard/surveyTileDirective.js"></script>

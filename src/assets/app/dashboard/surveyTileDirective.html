@@ -1,0 +1,45 @@
+<div class="tile subtle">
+    <h3>{{ surveyName }}</h3>
+    <date>{{ surveyDate | date }}</date>
+    <p>Responses: {{ surveyResponseCount }}</p>
+    <div class="results">
+        <h4>Results</h4>
+        <div class="result">
+            <h5><i class="fa fa-tachometer"></i> Scoring question</h5>
+            <div class="pure-g">
+                <div class="pure-u-1-2">
+                    <p>"The question text for question goes here."</p>
+                </div>
+                <div class="pure-u-1-2">
+                    <p class="score">7.3</p>
+                </div>
+            </div>
+
+            <h5><i class="fa fa-comment"></i> Freeform question</h5>
+            <div class="pure-g">
+                <div class="pure-u-1-2">
+                    <p>"The question text for freeform responses goes here."</p>
+                </div>
+                <div class="pure-u-1-2">
+                    <p><a class="button" href="#">Download <i class="fa fa-download"></i></a></p>
+                </div>
+            </div>
+
+            <h5><i class="fa fa-envelope-o"></i> Email request </h5>
+            <div class="pure-g">
+                <div class="pure-u-1-2">
+                    <p>"Please enter your email if you would like to receive a copy of the presentation."</p>
+                </div>
+                <div class="pure-u-1-2">
+                    <p><a href="#">Download <i class="fa fa-download"></i></a></p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <p><a href="#">Survey links <i class="fa fa-chevron-down"></i></a></p>
+    <div class="survey-links">
+        <p>URL: <a href="http://bit.ly/1DWY38v" target="_blank">http://bit.ly/1DWY38v</a></p>
+        <img src="https://chart.googleapis.com/chart?chs=150x150&amp;cht=qr&amp;chl=http://bit.ly/1DWY38v" alt=""/>
+    </div>
+</div>
