@@ -3,3 +3,9 @@ footer {
   background-color: $primary-nav-and-footer-colour;
 }
 
+.footer {
+	background: #ddd;
+	padding: 1.5em 0;
+
+	p:last-child { margin: 0; }
+}

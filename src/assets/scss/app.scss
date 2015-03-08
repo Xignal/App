@@ -5,14 +5,11 @@
 @import "surveys";
 @import "respontent";
 @import "helpers";
+@import "home";
 
 .inner {
-  margin: 0 auto;
-  max-width: $medium-screen;
-}
-
-.content { 
-	margin-top: 5em;
+	margin: 0 auto;
+	max-width: $medium-screen;
 }
 
 .powered-by {

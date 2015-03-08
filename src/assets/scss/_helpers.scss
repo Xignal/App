@@ -27,13 +27,15 @@
 **/
 
 .pure-button {
+    font-family: $base-font-family;
     background: $xignal-orange;
     border-radius: 9999px !important;
     color: white;
     font-weight: 700;
-    padding: 1em 2em;
+    padding: 0.8em 2em;
     transition: background-color 0.5s ease;
 }
+.pure-button-sm { padding: 0.5em 1em; font-size: 1rem; }
 
 // Reset all the buttons
 .pure-button:hover,
@@ -45,4 +47,3 @@
 
 .pure-button:hover { background: lighten($xignal-orange, 10%); color: white; }
 .pure-button:active { box-shadow: inset 0 3px 5px rgba(0,0,0,0.1); }
-

@@ -33,18 +33,16 @@ header {
     color: white;
 }
 
-.home-menu ul.pure-menu-list {
-    display: none;
-}
-
 .home-menu li a {
     color: #FFF;
     font-size: 80%;
     opacity: 0.7;
     line-height: 3em;
+    font-weight: $font-weight-bold;
 }
 .home-menu li a:hover,
 .home-menu li a:focus {
+    color: $xignal-orange;
     background: none;
     border: none;
     opacity: 1;
