@@ -5,7 +5,9 @@
 
     function api($resource) {
 
-      var rootUrl = 'http://www.xignal.co';
+      // var rootUrl = 'http://www.xignal.co';
+      var rootUrl = 'http://localhost:1337';
+
       var endpoints = {
         'surveys': rootUrl + '/surveys',
         'surveyQuestions': rootUrl + '/surveys/:id',

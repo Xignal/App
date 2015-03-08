@@ -36,9 +36,7 @@ module.exports.routes = {
     view: 'home'
   },
 
-  '/survey/:id': {
-    view: 'survey'
-  },
+  '/survey/:id': 'SurveysController.displaySurvey',
 
   '/register': {
     view: 'register'
