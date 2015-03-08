@@ -3,9 +3,66 @@
 @import "header";
 @import "forms";
 @import "surveys";
+@import "respontent";
+@import "helpers";
 
 .inner {
-  margin: auto;
-  max-width: $large-screen;
+  margin: 0 auto;
+  max-width: $medium-screen;
 }
 
+.content { 
+	margin-top: 5em;
+}
+
+.powered-by {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    margin-left: -3em;
+    color: #ccc;
+    span { display: block; height: 2em; line-height: 2em; vertical-align: middle; }
+    a { opacity: 0.3; transition: opacity 0.5s ease; clear: both; }
+    a:hover { opacity: 1; }
+}
+
+/*
+ * -- TABLET (AND UP) MEDIA QUERIES --
+ * On tablets and other medium-sized devices, we want to customize some
+ * of the mobile styles.
+ */
+@media (min-width: 48em) {
+
+    /* We increase the body font size */
+    body {
+        font-size: 16px;
+    }
+
+    /* We can align the menu header to the left, but float the
+    menu items to the right. */
+    .home-menu {
+        text-align: left;
+    }
+        .home-menu ul {
+            display: inline-block;
+            float: right;
+            padding-right: 1em;
+            position: absolute; 
+            right: 0; 
+            top: 0.6em;
+        }
+
+    .home-menu ul.pure-menu-list {
+        display: inline-block;
+    }
+
+}
+
+/*
+ * -- DESKTOP (AND UP) MEDIA QUERIES --
+ * On desktops and other large devices, we want to over-ride some
+ * of the mobile and tablet styles.
+ */
+@media (min-width: 78em) {
+
+}
