@@ -1,10 +1,10 @@
 (function () {
     'use strict';
 
-    var controllerId = 'xignal';
-    angular.module('app').controller(controllerId, ['$location', 'api', xignal]);
+    var controllerId = 'survey';
+    angular.module('app').controller(controllerId, ['$location', 'api', survey]);
 
-    function xignal($location, api) {
+    function survey($location, api) {
       var vm = this;
       var questionIndex = 0;
       var numberOfQuestions;
@@ -19,34 +19,38 @@
         if(q.type == 'string') return 'blue';
         if(q.type == 'range') return 'purple';
         return 'green';
-      }
+      };
 
       vm.showPage = function(index) {
         return index == questionIndex;
-      }
-
-      vm.isString = function(q){
-        return q.type == 'string';
-      }
-
-      vm.isText = function(q){
-        return q.type == 'text';
-      }
+      };
 
       vm.isRange = function(q){
         return q.type == 'range';
-      }
+      };
+
+      vm.isText = function(q){
+        return q.type == 'text';
+      };
+
+      vm.isEmail = function(q){
+        return q.type == 'email';
+      };
+
+      vm.start = function(){
+
+      };
 
       vm.next = function(){
-        var response = {questionId: vm.survey.questions[questionIndex].id};
+        var question = vm.survey.questions[questionIndex];
+        var response = {questionId: question.id};
 
         if(questionIndex < numberOfQuestions) {
 
           // create question and save values
-          if(questionIndex == 1) response.value = vm.email;
-          if(questionIndex == 0) response.numberValue = vm.nps;
-
-          api.createResponse(vm.survey.id, response);
+          if(question.type == 'email') response.value = vm.emailValue;
+          if(question.type == 'text') response.value = vm.textValue;
+          if(question.type == 'range') response.numberValue = vm.rangeValue;
 
           questionIndex++;
         }
@@ -54,16 +58,21 @@
         vm.canGoBack = true;
 
         if(questionIndex == numberOfQuestions) {
-          // create question and save values
-          // publish response
+          // publish responses
+          forEach(response in responses){
+            api.createResponse(vm.survey.id, response);
+          }
+
           vm.showLastPage = true;
           vm.canGoBack = false;
         }
 
         return false;
-      }
+      };
 
-      if(id){
+      if(xignal.surveyFromServer){
+        populateVm(xignal.surveyFromServer);
+      } else if(id) {
         var survey = api.getSurvey(id);
         survey.$promise.then(populateVm, showError);
       }
@@ -71,6 +80,7 @@
       function populateVm(survey){
         vm.survey = survey;
         numberOfQuestions = survey.questions.length;
+        responses = new Array(numberOfQuestions);
       }
 
       function showError(err){

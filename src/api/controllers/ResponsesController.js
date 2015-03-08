@@ -6,14 +6,13 @@
  */
 
 module.exports = {
-    average: function(req, res) {
-        var id = req.params["id"];
-        var query = { "questionId": id };
+  average: function(req, res) {
+      var id = req.params["id"];
+      var query = { "questionId": id };
 
-        Responses.find(query).groupBy("questionId").average("numberValue").exec(
-            function (error, response) {
-                return res.send(response);
-            });
-
-}
+      Responses.find(query).groupBy("questionId").average("numberValue").exec(
+          function (error, response) {
+              return res.send(response);
+          });
+  }
 }
