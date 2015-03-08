@@ -8,7 +8,7 @@
 
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="//yui.yahooapis.com/pure/0.6.0/pure-min.css">
-    <link rel="stylesheet" href="/css/custom.css">
+    <link rel="stylesheet" href="/css/app.css">
 
     <!--[if lte IE 8]>
         <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-old-ie-min.css">
@@ -20,7 +20,7 @@
     <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
 </head>
 
-<body>
+<body class="respondent">
 	<div class="header pure-menu-horizontal pure-menu-fixed">
 	    <div class="home-menu pure-menu hidden">
 	        <a class="pure-menu-heading" href=""><img src="/images/xignal-logo.svg" alt="Xignal" style="max-height:1.5em;"></a>
@@ -42,12 +42,14 @@
 	    </div>
 	</div>
 
-	<div class="content-wrapper">
+	<div class="content-wrapper ">
 	    <div class="content respondent">
-			<div class="pure-g">
+			<div class="pure-g inner">
 				<div class="pure-u-1-1 l-box">
 					<div class="story text-center">
-						<p>On the scale of bad to awesome, how well did you think I spoke today?</p>
+						<div class="description">
+							<p>On the scale of bad to awesome, how well did you think I spoke today?</p>
+						</div>
 
 						<div class="well text-center">
 							<ul class="range">
@@ -61,8 +63,8 @@
 					</div>
 
 					<div class="text-center">
-						<p class="text-grey">Question <strong>1</strong> of <strong>3</strong></p>
 						<p><a class="pure-button clean" href="/app/respondent/step-2.html">Next</a></p>
+						<p class="text-grey">Question <strong>1</strong> of <strong>3</strong></p>
 					</div>
 				</div>
 			</div>
